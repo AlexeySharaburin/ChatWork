@@ -83,6 +83,7 @@ public class ClientsPath {
         }
     }
 
+
     // поток чтения сообщений от сервера
     private class ReadMessageThread extends Thread {
 
@@ -93,7 +94,7 @@ public class ClientsPath {
                 while (true) {
                     string = in.readLine();
                     if (string.equals("выход")) {
-                        System.out.println("Вы покинули чат!");
+                        System.out.printf("%s, вы покинули чат!", clientName);
                         System.out.println("Всего хорошего! До новых встреч в ChatNet2.0!");
                         ClientsPath.this.closeSocket();
                         break;
@@ -132,4 +133,5 @@ public class ClientsPath {
     }
 
 }
+
 

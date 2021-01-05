@@ -38,10 +38,11 @@ public class ServerThread extends Thread {
             e.printStackTrace();
         }
 
+        Server.archive.sendMessage(out);
 
         String stringEnter = Server.time + " " + name + " вошёл в чат.";
         writeMessageEverywhere(stringEnter);
-        Server.archive.sendMessage(out);
+
 
         try {
             out.write(name + ", теперь вы можете начать обмениваться сообщениями " +
@@ -114,3 +115,21 @@ public class ServerThread extends Thread {
     }
 
 }
+
+
+// try { // вход в чат
+//
+//         while (true) { // проверка имени пользователя
+//         name = in.readLine();
+//         if (Server.listOfNames.add(name)) {
+//         out.write("Отлично, " + name + "!" + "\n");
+//         out.flush();
+//         break;
+//         } else {
+//         out.write("Уже есть пользователь с таким именем в ChatNet2.0! Введите другое имя: " + "\n");
+//         out.flush();
+//         }
+//         }
+//         } catch (IOException e) {
+//         e.printStackTrace();
+//         }

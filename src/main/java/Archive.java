@@ -32,11 +32,11 @@ public class Archive {
                     bufferedWriter.write(message + "\n");
                 }
 
-                bufferedWriter.write("*** В архиве сообщений больше нет" + "\n");
+                bufferedWriter.write("*** В архиве сообщений больше нет.\n" + "\n");
                 bufferedWriter.flush();
-            } else {
-                bufferedWriter.write("*** История сообщений чата пуста.\n" + "\n");
-                bufferedWriter.flush();
+//            } else {
+//                bufferedWriter.write("\n*** История сообщений чата пуста.\n" + "\n");
+//                bufferedWriter.flush();
             }
         } catch (IOException e) {
             e.printStackTrace();
